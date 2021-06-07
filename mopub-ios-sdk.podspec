@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   spec.social_media_url = 'http://twitter.com/mopub'
   spec.source           = { :git => 'https://github.com/mopub/mopub-ios-sdk.git', :tag => '5.18.2' }
   spec.requires_arc     = true
-  spec.ios.deployment_target = '10.0'
+  spec.ios.deployment_target = '8.0'
   spec.swift_version    = '5.0'
   spec.frameworks       = [
                             'AVFoundation',
@@ -24,8 +24,7 @@ Pod::Spec.new do |spec|
                             'CoreGraphics',
                             'CoreLocation',
                             'CoreMedia',
-                            'CoreTelephony',
-                            'Foundation',
+                            'CoreTelephony',                            
                             'MediaPlayer',
                             'QuartzCore',
                             'SystemConfiguration',
@@ -35,6 +34,7 @@ Pod::Spec.new do |spec|
   spec.weak_frameworks  = [
                             'AdSupport',
                             'StoreKit',
+                            'Foundation',
                             'WebKit'
                           ]
   spec.default_subspecs = 'MoPubSDK'

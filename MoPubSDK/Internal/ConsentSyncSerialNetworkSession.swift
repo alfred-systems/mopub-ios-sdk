@@ -89,6 +89,7 @@ public class ConsentSyncSerialNetworkSession: NSObject {
     
     /// Performs the pending request if it is not a duplicate of the last completed request. This function should only execute on the `serialQueue`.
     private func executePendingTaskIfNecessary() {
+        if #available(iOS 10, *) { //will.tu
         // This function should only be executed of the serialQueue.
         dispatchPrecondition(condition: .onQueue(serialQueue))
         
@@ -135,6 +136,7 @@ public class ConsentSyncSerialNetworkSession: NSObject {
                 self?.handleResponse(for: inProgressTask, error: error)
             }
         }
+        } // will.tu
     }
     
     /// Handles the response invoked by the internal network session.
